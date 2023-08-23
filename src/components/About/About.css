@@ -1,0 +1,36 @@
+
+
+#ContenedorAbout{
+    background: rgb(242,215,217);
+    background: linear-gradient(180deg, rgba(242,215,217,1) 0%, rgba(211,206,223,1) 35%, rgba(156,180,204,1) 100%);
+
+  
+
+}
+
+#logo{
+width:200px;
+}
+.cardsOportunidades:hover{
+    box-shadow: 5px 10px 20px 1px rgba(2, 2, 116, 0.273) !important;
+    transition: all 0.5s linear;
+
+}
+.cardsBody{
+padding: 2rem 0 !important;
+}
+.cardImg{
+    transition: all 0.2s ease-in-out;
+}
+.cardImg:hover{
+    transform: scale(1.1);
+}
+.cardsAbout{
+    object-fit: cover;
+    max-width: var(--max);
+    height: calc(var(--max));
+    width: 100%;
+}
+
+
+

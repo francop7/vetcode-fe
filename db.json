@@ -1,0 +1,32 @@
+{
+  "turnos": [
+    {
+      "TurnoPetName": "pato",
+      "TurnoDoctor": "Dra Liza Morgan",
+      "TurnoDetalle": "caries",
+      "TurnoFecha": "2023-08-25",
+      "TurnoHora": "20:00",
+      "id": 5
+    },
+    {
+      "TurnoPetName": "juan",
+      "TurnoDoctor": "Dra Liza Morgan",
+      "TurnoDetalle": "juancnasd",
+      "TurnoFecha": "2023-09-01",
+      "TurnoHora": "18:00",
+      "id": 6
+    }
+  ],
+  "patients": [
+    {
+      "nombre": "Franco Javier",
+      "apellido": "Paz",
+      "eMail": "franco@javier.com",
+      "telefono": "3816570405",
+      "nombreMascota": "perro",
+      "especie": "Perro",
+      "raza": "perro",
+      "id": 3
+    }
+  ]
+}

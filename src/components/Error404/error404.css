@@ -1,0 +1,17 @@
+.bgBody{
+  background-color: #748DA6;
+}
+
+#container{
+   
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.text-color {
+  color: #e42430;
+}

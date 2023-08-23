@@ -1,0 +1,40 @@
+.comentariodiv{
+    margin: 20px;
+}
+
+.cardcomentario{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+#imageniconocoment{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    border:0.5px rgb(91, 89, 89) solid;
+    box-shadow: rgb(97, 96, 96) 1px 5px 10px;
+}
+
+.cardcomentario2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cardcomentario i{
+    color: rgb(222, 222, 70);
+}
+
+.nombrecomentarios{
+    margin-left: 0.5rem;
+}
+
+#contenedorcomentarios{
+    display: flex;
+    justify-content: space-between;
+}

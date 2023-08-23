@@ -1,0 +1,70 @@
+.tituloProd {
+  background-color: #9cb4cc;
+  font-size: x-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: white;
+}
+
+.productoSolo {
+  border: 1px solid rgb(178, 178, 178);
+  border-radius: 2%;
+  margin: 15px;
+  margin-top: 0px;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.nombreDelProd {
+  font-size: larger;
+  color: darkslateblue;
+  margin: 0rem;
+}
+
+.precioDelProd {
+  color: rgb(255, 0, 0);
+  font-size: 1.8rem;
+}
+
+.parrafoDelProd {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+#prod1 {
+  margin: auto;
+  width: 12rem;
+  height: 13rem;
+}
+
+#prod2 {
+  width: 14rem;
+  height: 13rem;
+}
+
+#prod3 {
+  width: 14rem;
+  height: 13rem;
+}
+
+#prod4 {
+  width: 14rem;
+  height: 13rem;
+}
+
+
+.articulosProd {
+  text-decoration: none;
+}
+
+.productoSolo:hover {
+  box-shadow: 0px 0px 20px rgb(45, 45, 45);
+  transition-duration: 200ms;
+}

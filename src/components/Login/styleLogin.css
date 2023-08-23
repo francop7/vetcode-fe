@@ -1,0 +1,32 @@
+#login {
+  background-image: url(https://img.freepik.com/vector-premium/patron-transparente-azul-patas-gato-juguetes_197792-7838.jpg?w=740);
+  background-repeat: repeat;
+  background-size: 30%;
+  height: 32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#inicioSesion {
+  background-color: rgba(236, 236, 236, 0.475);
+  height: 19rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7%;
+}
+
+.contenedorDeInput {
+  padding: 5px;
+}
+
+.formcontrolinicio {
+  display: flex;
+  flex-direction: column;
+}
+
+.textoiniciosesion {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
