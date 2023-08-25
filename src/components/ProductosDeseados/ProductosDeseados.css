@@ -1,13 +1,19 @@
 .tituloProd {
-  background-color: #9cb4cc;
   font-size: x-large;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0px;
   font-weight: 700;
-  color: white;
 }
+.prodDestacados{
+  background: linear-gradient(
+    180deg,
+    rgba(156, 180, 204, 1) 0%,
+    rgba(211, 206, 223, 1) 35%,
+    rgba(242, 215, 217, 1) 100%
+  );
 
+}
 .productoSolo {
   border: 1px solid rgb(178, 178, 178);
   border-radius: 2%;
