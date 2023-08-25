@@ -11,7 +11,8 @@
 
 #inicioSesion {
   background-color: rgba(236, 236, 236, 0.475);
-  height: 19rem;
+  height: 23rem;
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,4 +30,21 @@
 
 .textoiniciosesion {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.errorEnLogin{
+  color: rgb(230, 77, 77);
+}
+
+@media(max-width : 535px){
+  #inicioSesion{
+    width: 50%;
+  }
+}
+
+@media(max-width : 378px){
+  #inicioSesion{
+    width: 50%;
+    height: 30rem;
+  }
 }
