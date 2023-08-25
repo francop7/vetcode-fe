@@ -33,7 +33,7 @@ const Login = () => {
     handleSubmit,
   } = useForm();
   return (
-    <div className="row" id="login">
+    <div className="row w-100" id="login">
       <div className="col-3 d-flex justify-content-center" id="inicioSesion">
         <form onSubmit={handleSubmit(onSubmit)} className="formcontrolinicio">
           <h2 className="text-center textoiniciosesion">INICIO SESION</h2>
