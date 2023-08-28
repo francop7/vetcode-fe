@@ -1,23 +1,18 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
-import swal from "sweetalert";
 
 function Formulario() {
-  const mostrarAlerta = () => {
-    swal({
-      title: "Tu consulta fue enviada",
-      icon: "success",
-      button: "Aceptar",
-    });
-  };
   const {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
-  function insertar() {}
+  function insertar() {
+    reset();
+  }
   return (
     <>
       <br />
@@ -46,13 +41,22 @@ function Formulario() {
                 />
 
                 {errors.nombre?.type === "required" && (
-                  <p> Ingrese solo palabras</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese solo palabras
+                  </p>
                 )}
                 {errors.nombre?.type === "minLength" && (
-                  <p> Ingrese como minimo 2 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como minimo 2 caracteres
+                  </p>
                 )}
                 {errors.nombre?.type === "maxLength" && (
-                  <p> Ingrese como maximo 20 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como maximo 20 caracteres
+                  </p>
                 )}
               </Form.Group>
 
@@ -71,13 +75,22 @@ function Formulario() {
                 />
 
                 {errors.apellido?.type === "required" && (
-                  <p> Ingrese solo palabras</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese solo palabras
+                  </p>
                 )}
                 {errors.apellido?.type === "minLength" && (
-                  <p> Ingrese como minimo 4 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como minimo 4 caracteres
+                  </p>
                 )}
                 {errors.apellido?.type === "maxLength" && (
-                  <p> Ingrese como maximo 20 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como maximo 20 caracteres
+                  </p>
                 )}
               </Form.Group>
 
@@ -96,34 +109,43 @@ function Formulario() {
                 />
 
                 {errors.telefono?.type === "required" && (
-                  <p> Ingrese solo numeros</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese solo numeros
+                  </p>
                 )}
                 {errors.telefono?.type === "minLength" && (
-                  <p> Ingrese como minimo 10 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como minimo 10 caracteres
+                  </p>
                 )}
                 {errors.telefono?.type === "maxLength" && (
-                  <p> Ingrese como maximo 15 caracteres</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como maximo 15 caracteres
+                  </p>
                 )}
               </Form.Group>
 
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput email"
-              >
+              <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control
-                  type="text"
-                  placeholder="Name@example.com"
-                  {...register("email", {
-                    pattern:
-                      /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  type="email"
+                  placeholder="Ingrese su email"
+                  {...register("Email", {
                     required: true,
+                    pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/,
                   })}
                 />
-                {errors.email?.type === "pattern" && (
-                  <p> El formato del correo no es valido</p>
+                {errors.Email?.type === "required" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    Ingrese un Correo Electronico. Por favor.{" "}
+                  </p>
                 )}
-                {errors.email?.type === "requiered" && (
-                  <p> Es necesario completar este campo</p>
+                {errors.Email?.type === "pattern" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    El formato de correo no es Valido.{" "}
+                  </p>
                 )}
               </Form.Group>
 
@@ -142,15 +164,13 @@ function Formulario() {
                 />
 
                 {errors.nombre?.type === "required" && (
-                  <p>Ingrese solo palabras</p>
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    Dejanos tu mensaje!
+                  </p>
                 )}
               </Form.Group>
 
-              <Button
-                onClick={() => mostrarAlerta()}
-                type="submit"
-                variant="primary"
-              >
+              <Button type="submit" variant="primary">
                 Enviar
               </Button>
             </Form>
