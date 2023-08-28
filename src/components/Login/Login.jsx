@@ -10,7 +10,6 @@ const Login = () => {
 
   const navigate = useNavigate();
   async function onSubmit(data) {
-    console.log(data)
     try {
       const res = await fetch(URL_BASE + '/login', {
         method: "POST",
