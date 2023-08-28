@@ -62,7 +62,7 @@ const token = localStorage.getItem("token");
           <Route exact path="/DetallesplanAdultos" element={<Adultos />} />
           <Route exact path="/Nosotros" element={<AboutPage />} />
           <Route exact path="/Contacto" element={<ContactPage />} />
-          <Route exact path="/login" element={<LoginPage />} />
+          <Route exact path="/login" element={<LoginPage />} token={token} />
           
           <Route
             exact

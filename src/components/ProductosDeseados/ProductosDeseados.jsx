@@ -10,7 +10,7 @@ const ProductosDeseados = () => {
       <section className="seccionDeProd justify-content-center mt-3 d-flex  ">
         <div className="row w-100 justify-content-around ">
 
-        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
               className="w-100"
@@ -29,7 +29,7 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
               className="w-100"
@@ -48,7 +48,7 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
               className="w-100"
@@ -67,7 +67,7 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
               className="w-100"

@@ -5,9 +5,13 @@ import { user } from "../Login/validar";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const token = localStorage.getItem("token");
   const URL_BASE = import.meta.env.VITE_API_URL_BASE;
-
   const navigate = useNavigate();
+  
+  if (token) {
+    navigate('/admin')
+  }
   async function onSubmit(data) {
     try {
       const res = await fetch(URL_BASE + "/login", {
