@@ -4,9 +4,9 @@ import Button from "react-bootstrap/Button";
 const ProductosDeseados = () => {
   return (
     <div className="prodDestacados  mt-4">
-      <h2 className="tituloProd container col-9 text-center">
+      <h1 className="tituloProd container col-9 text-center">
         PRODUCTOS DESTACADOS
-      </h2>
+      </h1>
       <section className="seccionDeProd justify-content-center mt-3 d-flex  ">
         <div className="row w-100 justify-content-around ">
 
