@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "react-bootstrap";
 import "./styleComentario.css";
 import imagenicono1 from "../../assets/Images/leomechi.png";
