@@ -1,8 +1,35 @@
-# React + Vite
+# Vet-Code 🐶🐱🐈
+#Proyecto de Veterinaria con ReactJS 💻
+Proyecto realizado para una veterinaria ficticia, se utiliza ReactJS para realizar el maquetado, como también para CRUD, es decir, dar de alta y baja los turnos y pacientes desde una página de adminsitración que luego se muestran en una tabla y se guardan en una base de datos en la nube llamada Mongo Atlas_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DEMO ✨ ✨
+🔗 🔗
 
-Currently, two official plugins are available:
+Netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Iniciar Sesión
+Para iniciar sesión como Administrador:
+
+usuario: admin
+password: admin
+Construido con:
+ReactJS
+NodeJS
+JAVASCRIPT
+HTML
+CSS
+[React Bootstrap] (https://react-bootstrap.github.io/)
+Bootstrap v.5.1.3
+Sweet alert
+Instalación
+Deberás contar con las siguientes dependencias del proyecto:
+
+Node Package Manager Tras clonar el repositorio, ejecutar el siguiente comando en la carpeta en una terminal de Node:
+
+npm install Las dependencias se instalarán automáticamente.
+
+Autores 👩‍💻👩‍💻:
+Franco Javier Paz 
+Franco Leonardo Villafañe
+Gonzalo Javier Manzano
+Valentina Salvatierra Barraza
