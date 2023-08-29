@@ -8,20 +8,33 @@ DEMO ✨ ✨
 Netlify
 
 Iniciar Sesión
+
 Para iniciar sesión como Administrador:
 
 usuario: admin
+
 password: admin
+
 Construido con:
+
 ReactJS
+
 NodeJS
+
 JAVASCRIPT
+
 HTML
+
 CSS
+
 [React Bootstrap] (https://react-bootstrap.github.io/)
+
 Bootstrap v.5.1.3
+
 Sweet alert
+
 Instalación
+
 Deberás contar con las siguientes dependencias del proyecto:
 
 Node Package Manager Tras clonar el repositorio, ejecutar el siguiente comando en la carpeta en una terminal de Node:
@@ -29,7 +42,11 @@ Node Package Manager Tras clonar el repositorio, ejecutar el siguiente comando e
 npm install Las dependencias se instalarán automáticamente.
 
 Autores 👩‍💻👩‍💻:
-Franco Javier Paz 
+
+Franco Javier Paz
+
 Franco Leonardo Villafañe
+
 Gonzalo Javier Manzano
+
 Valentina Salvatierra Barraza
