@@ -33,7 +33,6 @@ const TurnosEdit = ({ URL_BASE, getAp }) => {
     try {
       const res = await fetch(`${URL_BASE}/turnos/${id}`);
       const turnoApi = await res.json();
-      console.log(turnoApi)
       setTurnoEd(turnoApi);
     } catch (error) {
       console.log(error);

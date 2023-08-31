@@ -12,7 +12,7 @@ const Turnos = ({ turno, URL_BASE, getAp }) => {
 
     return newDate;
   };
-  // console.log(turno)
+ 
   const handleDelete = (id) => {
     Swal.fire({
       title: 'Esta Seguro?',
