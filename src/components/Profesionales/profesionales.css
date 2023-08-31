@@ -1,9 +1,9 @@
 .bodyBg{
-    background-color: #D3CEDF;
+    background-color: #D3CEDF !important;
 }
 .bodyBgprof{
     background-color: #748DA6;
-    color: #9CB4CC;
+    color: #D3CEDF;
     
 }
 .prof-cards{
