@@ -1,6 +1,8 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import swal from "sweetalert";
 
 function Formulario() {
   const {
@@ -11,8 +13,10 @@ function Formulario() {
   } = useForm();
 
   function insertar() {
-    reset();
-  }
+    reset( );
+    Swal.fire('Listo!', 'Tu consulta fue enviada.', 'success');
+  };
+  
   return (
     <>
       <br />
@@ -36,14 +40,16 @@ function Formulario() {
                     required: true,
                     minLength: 2,
                     maxLength: 20,
+                    pattern:/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g ,
+
                   })}
                   placeholder="Nombre"
                 />
 
-                {errors.nombre?.type === "required" && (
+                {errors.nombre?.type === "pattern" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
-                    Ingrese solo palabras
+                    Ingrese solo letras
                   </p>
                 )}
                 {errors.nombre?.type === "minLength" && (
@@ -70,14 +76,14 @@ function Formulario() {
                     required: true,
                     minLength: 4,
                     maxLength: 20,
+                    pattern: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g ,
                   })}
                   placeholder="Apellido"
                 />
-
-                {errors.apellido?.type === "required" && (
+                {errors.apellido?.type === "pattern" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
-                    Ingrese solo palabras
+                    Ingrese solo letras
                   </p>
                 )}
                 {errors.apellido?.type === "minLength" && (
@@ -158,19 +164,23 @@ function Formulario() {
                   {...register("Mensaje", {
                     required: true,
                     minLength: 3,
-                    maxLength: 20,
+                    maxLength: 140,
                   })}
                   placeholder="Mensaje"
                 />
 
+              
                 {errors.nombre?.type === "required" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
-                    Dejanos tu mensaje!
+                    {" "}
+                    Ingrese como maximo 140 caracteres
                   </p>
                 )}
+
+
               </Form.Group>
 
-              <Button type="submit" variant="primary">
+              <Button onClick={handleSubmit} type="submit" variant="primary">
                 Enviar
               </Button>
             </Form>
