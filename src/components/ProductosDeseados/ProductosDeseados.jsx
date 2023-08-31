@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ProductosDeseados.css";
 import Button from "react-bootstrap/Button";
 
@@ -11,7 +12,7 @@ const ProductosDeseados = () => {
         <div className="row w-100 justify-content-around ">
 
         <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
-          <a href="" className="articulosProd">
+          <Link to='*' className="articulosProd">
             <img
               className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_704381-MLA50131832314_052022-F.webp"
@@ -25,12 +26,12 @@ const ProductosDeseados = () => {
             </h4>
             <Button className="BotonProd" variant="outline-danger">
               Ver mas...
-            </Button>{" "}
-          </a>
+            </Button>
+          </Link>
         </article>
 
         <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
-          <a href="" className="articulosProd">
+          <Link to="*" className="articulosProd">
             <img
               className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_768964-MLA70630902317_072023-F.webp"
@@ -44,12 +45,12 @@ const ProductosDeseados = () => {
             </h4>
             <Button className="BotonProd" variant="outline-danger">
               Ver mas...
-            </Button>{" "}
-          </a>
+            </Button>
+          </Link>
         </article>
 
         <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
-          <a href="" className="articulosProd">
+          <Link to='*' className="articulosProd">
             <img
               className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_951124-MLA54939344652_042023-F.webp"
@@ -64,11 +65,11 @@ const ProductosDeseados = () => {
             <Button className="BotonProd" variant="outline-danger">
               Ver mas...
             </Button>{" "}
-          </a>
+          </Link>
         </article>
 
         <article className="productoSolo col-10 col-md-3 col-lg-2 text-center">
-          <a href="" className="articulosProd">
+          <Link to='*' className="articulosProd">
             <img
               className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_923445-MLA54989875564_052023-F.webp"
@@ -82,8 +83,8 @@ const ProductosDeseados = () => {
             </h4>
             <Button className="BotonProd" variant="outline-danger">
               Ver mas...
-            </Button>{" "}
-          </a>
+            </Button>
+          </Link>
         </article>
         </div>
       </section>
