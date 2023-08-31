@@ -179,9 +179,19 @@ function Formulario() {
                   })}
                   placeholder="Mensaje"
                 />
-
-              
-                {errors.nombre?.type === "required" && (
+                {errors.Mensaje?.type === "required" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Este campo es requerido
+                  </p>
+                )}
+                {errors.Mensaje?.type === "minLength" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Ingrese como minimo 3 caracteres
+                  </p>
+                )}  
+                {errors.Mensaje?.type === "maxLength" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
                     Ingrese como maximo 140 caracteres
