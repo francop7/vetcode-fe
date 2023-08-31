@@ -3,10 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+
 
 const Forms = () => {
-  function insertar(data) {
-    console.log(data);
+  function insertar() {
+    Swal.fire('Listo!', 'Tu consulta fue enviada.', 'success');
     reset();
   }
   const {
@@ -24,12 +26,16 @@ const Forms = () => {
           type="text"
           {...register("Nombre", {
             required: true,
+            pattern: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g,
             minLength: 3,
             maxLength: 20,
           })}
         />
         {errors.Nombre?.type === "required" && (
           <p>Ingrese su Nombre. Por favor. </p>
+        )}
+        {errors.Nombre?.type === "pattern" && (
+          <p>Ingrese solo letras. Por favor. </p>
         )}
         {errors.Nombre?.type === "minLength" && (
           <p>Ingrese como minimo 3 caracteres. Por favor. </p>
@@ -46,7 +52,7 @@ const Forms = () => {
           placeholder="Ingrese su Apellido"
           {...register("Apellido", {
             required: true,
-            valueAsDate: true,
+            pattern: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g,
             minLength: 3,
             maxLength: 25,
           })}
@@ -54,6 +60,10 @@ const Forms = () => {
         {errors.Apellido?.type === "required" && (
           <p>Ingrese su Apellido. Por favor. </p>
         )}
+        {errors.Apellido?.type === "pattern" && (
+          <p>Ingrese solo letras. Por favor. </p>
+        )}
+
         {errors.Apellido?.type === "minLength" && (
           <p>Ingrese como minimo 3 caracteres. Por favor. </p>
         )}
@@ -87,33 +97,30 @@ const Forms = () => {
           placeholder="Ingrese su numero de Celular"
           {...register("Celular", {
             required: true,
-            valueAsNumber: true,
-            min: 10,
-            max: 13,
+            minLength: 10,
+            maxLength: 13,
           })}
         />
         {errors.Celular?.type === "required" && (
           <p>Ingrese un numero de Celular. Por favor. </p>
         )}
-        {errors.Celular?.type === "valueAsNumber" && (
-          <p>Ingrese un numero de Celular Valido. Por favor. </p>
-        )}
+        
         {errors.Celular?.type === "min" && (
-          <p>Ingrese un numero de Celular Valido. Por favor. </p>
+          <p>Ingrese al menos 10 digitos. Por favor. </p>
         )}
         {errors.Celular?.type === "max" && (
-          <p>Ingrese un numero de Celular Valido. Por favor. </p>
+          <p>Ingrese un numero no mayor a 13 digitos. Por favor. </p>
         )}
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea">
-        <Form.Label>Como podemos Ayudarte?</Form.Label>
+        <Form.Label >Como podemos Ayudarte?</Form.Label>
         <Form.Control
+          placeHolder='tienes un limite de 120 caracteres'
           as="textarea"
           rows={3}
           {...register("Descripcion", {
             required: true,
             minLength: 5,
-            valueAsDate: true,
             maxLength: 120,
           })}
         />
@@ -124,11 +131,9 @@ const Forms = () => {
           <p>Ingrese como minimo una consulta de 5 caracteres. Por favor. </p>
         )}
         {errors.Descripcion?.type === "maxLength" && (
-          <p>Ingresó el maximo de caracteres para su consuta. </p>
+          <p>El limite de caracteres para su consulta es de 120. </p>
         )}
-        {errors.Descripcion?.type === "valueAsDate" && (
-          <p>Ingresó el maximo de caracteres para su consuta. </p>
-        )}
+        
       </Form.Group>
 
       <Button variant="secondary" type="submit">
