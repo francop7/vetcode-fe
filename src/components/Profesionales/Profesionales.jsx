@@ -6,7 +6,7 @@ import "./profesionales.css";
 
 const Profesionales = () => {
   return (
-    <div className=" container-fluid p-3 ">
+    <div className=" container-fluid p-3 bodyBg ">
       <div className="d-flex p-5 justify-content-center">
         <h1>NUESTROS PROFESIONALES</h1>
       </div>
