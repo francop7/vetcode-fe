@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import swal from "sweetalert";
+
 
 function Formulario() {
   const {
@@ -15,7 +15,7 @@ function Formulario() {
   function insertar() {
     reset( );
     Swal.fire('Listo!', 'Tu consulta fue enviada.', 'success');
-  };
+  }
   
   return (
     <>
@@ -45,7 +45,12 @@ function Formulario() {
                   })}
                   placeholder="Nombre"
                 />
-
+                {errors.nombre?.type === "required" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Este campo es requerido
+                  </p>
+                )}
                 {errors.nombre?.type === "pattern" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
@@ -74,12 +79,18 @@ function Formulario() {
                   type="text"
                   {...register("apellido", {
                     required: true,
-                    minLength: 4,
+                    minLength: 2,
                     maxLength: 20,
                     pattern: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g ,
                   })}
                   placeholder="Apellido"
                 />
+                {errors.apellido?.type === "required" && (
+                  <p style={{ color: "red", fontSize: "25px" }}>
+                    {" "}
+                    Este campo es requerido
+                  </p>
+                )}
                 {errors.apellido?.type === "pattern" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
@@ -89,7 +100,7 @@ function Formulario() {
                 {errors.apellido?.type === "minLength" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
-                    Ingrese como minimo 4 caracteres
+                    Ingrese como minimo 2 caracteres
                   </p>
                 )}
                 {errors.apellido?.type === "maxLength" && (
@@ -117,7 +128,7 @@ function Formulario() {
                 {errors.telefono?.type === "required" && (
                   <p style={{ color: "red", fontSize: "25px" }}>
                     {" "}
-                    Ingrese solo numeros
+                    Este campo es requerido
                   </p>
                 )}
                 {errors.telefono?.type === "minLength" && (
